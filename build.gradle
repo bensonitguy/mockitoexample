@@ -21,9 +21,6 @@ apply plugin: 'war'                               // standard Web Archive plugin
 apply plugin: 'com.google.cloud.tools.appengine'  // App Engine tasks
 
 dependencies {
-
-    compile group: 'org.powermock', name: 'powermock-api-mockito2', version: '+'
-    compile group: 'org.powermock', name: 'powermock-module-junit4', version: '+'
     
     compile 'com.google.appengine:appengine-api-1.0-sdk:+'  // Latest App Engine Api's
 
