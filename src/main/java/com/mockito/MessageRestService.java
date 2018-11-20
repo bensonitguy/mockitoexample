@@ -7,8 +7,8 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.core.Response;
 
-import static com.rest.news.FetchNewsService.getResponse;
-import static com.rest.news.FetchNewsService.getTodaysNews;
+import com.rest.news.FetchNewsService;
+
 
 
 @Path("/message")
@@ -20,7 +20,7 @@ public class MessageRestService {
     @Path("/news/{param}")
     public Response printMessage(@PathParam("param") String apiKey) {
 
-        String result = getTodaysNews(apiKey);
+        String result = fetchService.getTodaysNews(apiKey);
 
         return Response.status(200).entity(result).build();
 

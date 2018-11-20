@@ -5,7 +5,7 @@ import java.net.*;
 
 public class FetchNewsService {
 
-    public static String getTodaysNews(String api_key){
+    public String getTodaysNews(String api_key){
         return getResponse("https://newsapi.org/v2/top-headlines?country=in&apiKey="+api_key);
     }
 
@@ -17,7 +17,7 @@ public class FetchNewsService {
         return "This is a quote by "+whoIsMyFriend();
     }
 
-    public static String getResponse(String urlToRead) {
+    public String getResponse(String urlToRead) {
 
         StringBuilder result = new StringBuilder();
         try{
