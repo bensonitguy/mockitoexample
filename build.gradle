@@ -32,7 +32,9 @@ dependencies {
 
     testCompile 'junit:junit:4.12'
     testCompile 'com.google.truth:truth:0.33'
-    testCompile 'org.mockito:mockito-all:1.10.19'
+    compile group: 'org.mockito', name: 'mockito-core', version: '+'
+    compile group: 'org.powermock', name: 'powermock-api-mockito2', version: '+'
+    compile group: 'org.powermock', name: 'powermock-module-junit4', version: '+'
 
     testCompile 'com.google.appengine:appengine-testing:+'
     testCompile 'com.google.appengine:appengine-api-stubs:+'
